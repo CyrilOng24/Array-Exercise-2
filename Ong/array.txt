@@ -1,0 +1,74 @@
+<?php
+
+
+    $gg = array(5,1,1);
+    echo "Test Data: ";
+          for ($i = 0; $i < count($gg); $i++) {
+               echo "$gg[$i], ";
+            }
+    echo "</br>Total number of duplicate elements found in the array is : ";
+        for ($i = 0; $i < count($gg); $i++) {
+             for ($j = $i + 1; $j < count($gg); $j++) {
+                if ($gg[$i] == $gg[$j])
+                    echo "$gg[$j]";
+                }
+            }
+?>
+
+<?php
+
+$ggs = array(25,12,43);
+            echo "<br/><br/>Test Data: ";
+            for ($i = 0; $i < count($ggs); $i++) {
+                echo $ggs[$i].", ";
+            }
+            echo "</br>Frequency :</br>";
+            for ($i = 0, $unique = array(); $i < count($ggs); $i++) {
+                $frequency = 0;
+                if (!in_array($ggs[$i], $unique)) {
+                    array_push($unique, $ggs[$i]);
+                }
+                for ($j = 0; $j < count($ggs); $j++) {
+                    if ($unique[$i] == $ggs[$j]) {
+                        $frequency++;
+                    }
+                }
+                if ($unique[$i]) {
+                    echo "$unique[$i] occurs $frequency times<br/>";
+                }
+            }
+
+?>
+
+<?php
+$ll = array(25,47,42,56,32);
+            echo "<br/>Test Data: ";
+            for ($i = 0; $i < count($ll); $i++) {
+                echo $ll[$i].", ";
+            }
+            $ll_odd = array();
+            $ll_even = array();
+            for ($i = 0; $i < count($ll); $i++) {
+                if ($ll[$i] % 2 == 0) {
+                    array_push($ll_even, $ll[$i]);
+                }
+                else {
+                    array_push($ll_odd, $ll[$i]);
+                }
+            }
+            echo "<br/>The Even elements are :<br/>";
+            for ($i = 0; $i < count($ll_even); $i++) {
+                echo "$ll_even[$i] ";
+            }
+            echo "<br/>The Odd elements are :<br/>";
+            for ($i = 0; $i < count($ll_odd); $i++) {
+                echo "$ll_odd[$i] ";
+            }
+?>
+
+
+
+</body>
+</html>
+
+
